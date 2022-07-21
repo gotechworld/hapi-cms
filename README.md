@@ -1,3 +1,5 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=petrugiurca_hapi-cms)
+
 # HAPI - CMS API
 
 Serve cms blocks/pages banners/carrers/cities/regions/companies/sellers/stores from ES
