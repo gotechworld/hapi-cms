@@ -1,0 +1,41 @@
+{
+  "name": "hapi-cms-api",
+  "version": "1.0.0",
+  "description": "CMS Api - serve cms blocks/pages banners/carrers/cities/regions/companies/sellers/stores from ES",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist --copy-files",
+    "serve": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soft Dev <soft.dev@altex.ro>",
+  "license": "Proprietary",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/catbox-redis": "^6.0.2",
+    "@hapi/glue": "^8.0.0",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/hoek": "^9.2.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/vision": "^6.1.0",
+    "confidence": "^5.0.1",
+    "hapi-alerto": "git+ssh://git@gitlab.altex.ro:plug/hapi-alerto.git#release/1.0.0",
+    "hapi-internal-bridge": "git+ssh://git@gitlab.altex.ro:plug/hapi-internal-bridge.git",
+    "hapi-panda-es": "^1.0.2",
+    "hapi-pino": "^9.1.1",
+    "hapi-swagger": "^14.2.4",
+    "joi": "^17.6.0",
+    "lodash": "^4.17.14",
+    "panda-es-orm": "^1.0.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "eslint": "^8.8.0"
+  }
+}

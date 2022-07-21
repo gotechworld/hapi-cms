@@ -1,0 +1,8 @@
+src/config/manifest.json
+*.log
+.idea
+node_modules
+.DS_Store
+*.swp
+*.tmp
+npm-debug.log

@@ -1,0 +1,656 @@
+{
+	"info": {
+		"_postman_id": "52465a33-3dbe-49a2-95c3-b0dfcc94f0fb",
+		"name": "CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pages",
+			"item": [
+				{
+					"name": "List all pages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/pages/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"pages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/pages/32462",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"pages",
+								"32462"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new page",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-service-name",
+								"value": "{{X-Service-Name}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n    \"id\": 1293747472,\n    \"title\": \"test\",\n    \"content_heading\": \"Test\",\n    \"template\": \"one_column\",\n    \"description\": \"✅ Alege extragarantia sau garantia extinsa la termenul dat de producator si vei avea siguranta de durata pentru produsele achizitionate! Mai multe detalii despre ce inseamna, la ce ajuta si cum functioneaza gasesti aici!\\r\\n\",\n    \"identifier\": \"test\",\n    \"content\": \"    \\r\\n    \\r\\n\\r\\n\\r\\n\\r\\n<div class=\\\"\\\" style=\\\"\\\">\\r\\n    <p>test</p>\\r\\n</div>\\r\\n    \\r\\n\",\n    \"content_object\": \"[{\\\"content\\\":{\\\"html\\\":\\\"<p>test</p>\\\",\\\"text\\\":\\\"test\\\",\\\"align\\\":\\\"left\\\",\\\"bgColor\\\":\\\"\\\",\\\"color\\\":\\\"\\\",\\\"borderTop\\\":false,\\\"borderBottom\\\":false,\\\"verticalMargin\\\":false,\\\"verticalPadding\\\":false,\\\"fullPadding\\\":false},\\\"type\\\":\\\"medium\\\",\\\"blocks\\\":[]}]\"\n}]"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/pages",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"pages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banners",
+			"item": [
+				{
+					"name": "List all banners",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/banners/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"banners",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/banners/82736",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"banners",
+								"82736"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Banners",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-service-name",
+								"value": "{{X-Service-Name}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n\t\"id\": 3888888,\r\n    \"name\": \"test\",\r\n    \"position\": \"CONTENT_TOP\",\r\n    \"images\": [\r\n        {\r\n            \"file\": \"/p/o/porsche-panamera-cu-bodykit-techart-gt-3f4ef5134af107754a-0-0-0-0-0_7e2e2543.jpg\",\r\n            \"link\": \"\"\r\n        }\r\n    ]\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/banners/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"banners",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blocks",
+			"item": [
+				{
+					"name": "List all blocks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/blocks/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"blocks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/blocks/222",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"blocks",
+								"222"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Blocks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-service-name",
+								"value": "{{X-Service-Name}}"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n    \"id\": 123124124,\r\n    \"title\": \"faq_Informatii-Produse-ReturProduse\",\r\n    \"identifier\": \"faq_ip-returproduse\",\r\n    \"content\": \"<p>Daca esti nemultumit de produsele cumparate de la Altex.ro si vrei sa renunti la cumparare poti sa aplici pentru procedura de retur a produselor in maxim 10 zile de la receptia acestora.</p>\\r\\n<p>Dreptul de retur in termen de 10 zile este reglementat de Ordonanta 130/2000 privind protectia consumatorilor la incheierea si executarea contractelor la distanta.</p>\\r\\n<p>Dreptul de retur in 10 zile se adreseaza clientilor care au achizitionat produse online de pe site-ul <a href=\\\"https://www.altex.ro/\\\">www.altex.ro</a>.</p>\\r\\n<p>Clientul are dreptul de a denunta unilateral contractul la distanta, &icirc;n termen de 10 zile lucratoare, fara penalitati si fara invocarea vreunui motiv. Singurele costuri care pot cadea &icirc;n sarcina consumatorului sunt cheltuielile directe de returnare a produselor.</p>\\r\\n<p><strong>Atentie!</strong> Renuntarea la cumparare in termen de 10 zile se poate aplica doar pentru produsele comandate online si livrate prin curier.</p>\\r\\n<p>Dreptul de renuntarea la cumparare nu se aplica in cazul persoanelor juridice.</p>\\r\\n<p>Termenul de 10 zile se calculeaza de la data la care produsele au fost receptionate de catre client.</p>\\r\\n<p>Procedura de retur produse presupune urmatorii pasi:</p>\\r\\n<p><strong>1. Inregistrare cerere retur produse si obtinerea numarului de inregistrare retur (NR-RMA)</strong></p>\\r\\n<p>(1.1) Cumparatorul va trimite prin e-mail la adresa <a href=\\\"mailto:comenzi_web@bucuresti.altex.ro\\\">comenzi_web@altex.ro</a> o cerere cu subiectul - Cerere retur produse comanda nr. ____/_____ (trebuie specificat nr comenzii si data acestuia);<br /> (1.2) In cadrul cererii se vor specifica:</p>\\r\\n<p>- numar comanda si data emiterii comenzii;</p>\\r\\n<p>- date cumparator: nume si prenume, adresa de e-mail folosita la inregistrare cont si plasare comana online pe www.altex.ro;</p>\\r\\n<p>- numar factura si data emiterii facturii ce fac dovada achizitionarii produsului/produselor;</p>\\r\\n<p>- cauzele/motivele care au dus la aplicarea procedurii de retur produs(e) (optional);</p>\\r\\n<p>(1.3) La acest e-mail se vor atasa copii ale urmatoarelor documente: copie factura fiscala, aviz de insotire a marfii/AWB;<br /> (1.4) Cererea de retur va fi aprobata si inregistrata in sistem doar daca datale mentionate conform pasului (1.2) sunt corecte si complete si daca indeplineste conditiile obligatorii de aplicare procedura retur pentru produse cumparate (vezi paragraful - Conditii de acceptare retur produs(e));<br /> (1.5) In maxim 24-48 ore cumparatorul va primi pe e-mail un numar de inregistrare de retur (NR-RMA) si detalii privind aplicarea procedurii de retur.</p>\\r\\n<p><strong>3. Conditii de retur</strong></p>\\r\\n<p>Produsul returnat trebuie:</p>\\r\\n<p>- sa fie in aceeasi stare in care a fost livrat;</p>\\r\\n<p>- in ambalajul original cu toate accesoriile si consumabilele aferente (daca este cazul, inclusiv manuale, cd/dvd-uri, etc);</p>\\r\\n<p>- fara a reprezenta urme de uzura, modificare sau consum atat in cazul produselor cat si ale accesoriilor sau/si consumabilelor ce insotesc produsele returnate (cartuse imprimanta)</p>\\r\\n<p>- cu etichetele de garantie intacte si documentele originale care l-au insotit (factura fiscala, certificat garantie, etc);</p>\\r\\n<p>- in cazul sistemelor de operare licentele nu trebuie sa fie activate;</p>\\r\\n<p>- jocurile/CD-urile si DVD-urile nu trebuie desigilate;</p>\\r\\n<p>- produsele din categoria Electrocasnice, Electrocasnice mici, produse de ingrijire personala sau de uz casnic nu trebuie sa prezinte urme de utilizare. Exemplu: aragazul nu trebuie sa fie bransat la sursa de gaz, aparatul de aer conditionat nu trebuie sa fie instalat, combina frigorifica/frigiderele nu trebuie sa prezinta urme de utilizare, cafetiera nu trebuie sa fi fost folosita etc.</p>\\r\\n<p><strong>3.1. Conditii de retur pentru produsele din categoria IT</strong></p>\\r\\n<p>Nu se primesc produse care prezinta lovituri, crapaturi, componente arse sau plesnite, etichete sau sigilii de garantie deteriorate, indepartate sau modificate, produse utilizate in conditii neadecvate( tensiune de alimentare necorespunzatoare, maipulare incorecta, utilizarea produselor in conditii de praf, noxe sau sub actiunea substantelor chimice).</p>\\r\\n<p>Placi de baza: vor fi livrate in cutie insotite obligatoriu de toate accesoriile cu care au fost livrate ( placuta I/O, cabluri, manuale, CD-uri cu drivere..etc)Nu trebuie sa prezinte chipset ars/strapuns/explodat, sa nu aiba piese lipsa sau schimbate;</p>\\r\\n<p>Placi video: sa nu aiba chipset ars/strapuns/explodat, cooler rupt sau lipsa, contacte lipite sau topite, ( recomandare: la placile cu TV-OUT trebuie neaparat ca in momentul conexiunii dintre calculator si televizor acestea sa fie oprite si scoase de sub tensiune), sa nu aibe piese lipsa sau schimbate;</p>\\r\\n<p>Memoriile: sa nu prezinte contacte lipsa sau defecte fizice;</p>\\r\\n<p>Procesoare: sa nu prezinte pini indoiti, pastila de siliciu sa fie arsa/ciobita/strapunsa;&nbsp; sa nu aiba deteriorati sau lipsa suportii de cauciuc pentru cooler la procesoarele AMD si de asemenea sa fie insotit de coolerul original;</p>\\r\\n<p>HDD: totalitatea seriilor, de producator si furnizor sa fie intacte, sa nu prezinte chipset ars/strapuns/explodat sau piese lipsa; in plus trebuie sa fie intacta si seria de pe laterala</p>\\r\\n<p>Unitati optice: sa nu prezinte CD/DVD spart in interior sau urme de fortare care sa fi afectat functionalitatea aparatului sau sa aiba trapa blocata in pozitia deschis-acest fapt atrage anualarea garantiei unitatii optice</p>\\r\\n<p><strong>4. Constatare si validare acceptare retur produs(e)</strong></p>\\r\\n<p>(4.1) Dupa sosirea produsului/produselor in locatia Altex, personalul calificat va verifica si constata daca pentru aceste produse primite se aplica procedura de retur. Verificarea si constatarea se face pe baza cererii de retur emisa de catre cumparator si a conditiilor obligatorii de aplicare procedura retur pentru produse cumparate (vezi paragraful - Conditii de acceptare retur produs(e));<br /> (4.2) Rezultatele finale constatate vor fi comunicate cumparatorului prin e-mail, in maxim 24-48 ore de la primirea produsului/produselor, acestea facand referire si la taxele speciale aplicate, daca este cazul, in procesul de retur produs(e) (vezi paragraful - Costuri si taxe speciale pentru retur produs(e));<br /> (4.3) Pe baza rezultatelor comunicate, cumparatorul este obligat, prin e-mail, in a furniza acceptul sau observatiile cu privire la cele mentionate in rezultatele comunicate, in vederea continuarii procesului de retur produs(e).</p>\\r\\n<p><strong>Service si garantie</strong><br /> Pentru produsele care prezinta defecte in perioada de garantie si nu indeplinesc conditiile obligatorii de aplicare procedura retur pentru produse cumprate (vezi paragraful - Conditii de acceptare retur produs(e)), cumparatorul va contacta Departamentul Relatii Clienti in a fi redirectionat catre locatiile service autorizate.</p>\\r\\n<p><strong>Inlocuire produs</strong><br /> Pentru produsele cumparate care indeplinesc conditiile obligatorii de aplicare procedura retur si presupune inlocuire produs, vanzatorul va inlocui produsul cu unul nou al modelului specificat in comanda initiala a cumparatorului. Daca se agreeaza inlocuirea cu un produs din aceeasi categorie de o valoare mai mare, cumparatorul va plati diferenta, respectiv daca valoarea este mai mica, cumparatorul va primi o rambursare partiala pana la valoarea produsului inlocuitor.</p>\\r\\n<p><strong>5.Costuri si taxe speciale pentru retur produs(e)</strong></p>\\r\\n<p><strong>Costuri suportate de catre cumparator:</strong></p>\\r\\n<p>- Costuri de retur si transport curier pentru produsul in cazul caruia cumparatorul renunta la achizitionarea produsului in termen de 10 zile de la receptia produsului;</p>\\r\\n<p>- Cost transport curier pentru optiunea cumparatorului de a reexpedia produsul ce s-a constatat de catre vanzator ca nu indeplineste conditiile obligatorii de aplicare procedura retur produs(e);</p>\\r\\n<p><strong>Costuri suportate de catre vanzator:</strong></p>\\r\\n<p>Costuri de retur si transport curier pentru produsul in cazul caruia la receptia produsului cumparatorul constata ca:</p>\\r\\n<p>- Produs ce nu este conform cu specificatiile din oferta vanzatorului;</p>\\r\\n<p>- Produs ce nu este conform specificatiilor mentionate in comanda cumparatorului;</p>\\r\\n<p>- Produs este nefunctional in primele 24 ore de la receptie sau colete ce prezinta deteriorari.</p>\\r\\n<p><strong>Rambursare sumelor</strong><br /> Rambursarea sumelor se va face in cel mult 30 de zile de la data denuntarii contractului de catre consumator.</p>\\r\\n<p>Afla detalii despre <a href=\\\"https://www.altex.ro/termeni-legali\\\" target=\\\"_blank\\\">termeni legali</a> aplicabili procedurii de retur produs(e).</p>\\r\\n<p><strong>Nota:</strong><br /> 1. Politica de retur produs(e) mentionata mai sus se aplica doar produselor comandate online pe www.altex.ro ce au fost receptionate de catre cumparator persoana fizica in urma transportului prin curier;<br /> 2. Politica de retur produs(e) mentionata mai sus nu se aplica in cazul produselor comandate/cumparate in magazinele Altex. Pentru produsele comandate/cumparate in magazinele Altex se aplica procedura de retur produs(e) din respectiva locatie Altex unde au fost emise documentele de vanzare (pentru detalii de contact, vezi <a href=\\\"https://www.altex.ro/magazine/\\\" target=\\\"_blank\\\">retea de magazine Altex</a>);<br /> 3. Pentru produsele ale caror colete reprezinta deteriorari vizibile la primirea prin curier, cumparatorul este rugat sa refuze receptia lor;<br /> 4. Produsele comandate online pe www.altex.ro sunt livrate numai sigilat in ambalaj original de la producator. Pentru unele categorii de produse, daca este cazul, Altex Romania isi rezerva dreptul de a livrea in ambalaj suplimentar in vederea protectiei ambalajului original.</p>\"\r\n}\r\n]"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/blocks",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"blocks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "List all cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/cities",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/cities/14108",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"cities",
+								"14108"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cities",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"region_id\": 0,\r\n    \"name\": \"string\"\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/cities/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"cities",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete city",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":{city id - integer}\r\n}s"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/cities/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"cities",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "List all companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/companies",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/companies/7412751",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"companies",
+								"7412751"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Companies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"cui\": 0,\r\n    \"registration_number\": \"string\",\r\n    \"name\": \"string\",\r\n    \"region\": \"string\",\r\n    \"city\": \"string\",\r\n    \"street\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"type_id\": 0,\r\n    \"region_id\": 0\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/companies/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"companies",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Regions",
+			"item": [
+				{
+					"name": "List all regions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/regions/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"regions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/regions/295",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"regions",
+								"295"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Region",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/regions",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"regions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sellers",
+			"item": [
+				{
+					"name": "List all sellers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/sellers",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"sellers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single seller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/sellers/1",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"sellers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Sellers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"name\": \"string\",\r\n    \"status\": 0,\r\n    \"company_name\": \"string\",\r\n    \"company_cui\": \"string\",\r\n    \"company_fiscal_number\": \"string\",\r\n    \"address\": \"string\",\r\n    \"bank_name\": \"string\",\r\n    \"bank_account\": \"string\",\r\n    \"email\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"description\": \"string\",\r\n    \"warranty_info\": \"string\",\r\n    \"rma_info\": \"string\",\r\n    \"shipping_info\": \"string\",\r\n    \"customer_confidentiality_info\": \"string\"\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/sellers",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"sellers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "Stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/stores",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stores ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_cms}}/stores/84042",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"stores",
+								"84042"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Stores ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 222,\n    \"name\": \"Angelin test\",\n    \"erp_id\": 222222,\n    \"network\": 1,\n    \"image\": \"/a/l/altex-campulung.jpg\",\n    \"region_id\": 280,\n    \"city_id\": 3588,\n    \"address\": \"Str.Negru Voda nr.101, Campulung \",\n    \"schedule\": [\n        {\n            \"day\": \"1\",\n            \"opening_hours\": \"09:00\",\n            \"closing_hours\": \"19:00\",\n            \"day_name\": \"Luni\"\n        },\n        {\n            \"day\": \"2\",\n            \"opening_hours\": \"09:00\",\n            \"closing_hours\": \"19:00\",\n            \"day_name\": \"Marți\"\n        },\n        {\n            \"day\": \"3\",\n            \"opening_hours\": \"09:00\",\n            \"closing_hours\": \"19:00\",\n            \"day_name\": \"Miercuri\"\n        },\n        {\n            \"day\": \"4\",\n            \"opening_hours\": \"09:00\",\n            \"closing_hours\": \"19:00\",\n            \"day_name\": \"Joi\"\n        },\n        {\n            \"day\": \"5\",\n            \"opening_hours\": \"09:00\",\n            \"closing_hours\": \"19:00\",\n            \"day_name\": \"Vineri\"\n        },\n        {\n            \"day\": \"6\",\n            \"opening_hours\": \"09:00\",\n            \"closing_hours\": \"14:00\",\n            \"day_name\": \"Sâmbătă\"\n        },\n        {\n            \"day\": \"7\",\n            \"opening_hours\": \"-\",\n            \"closing_hours\": \"-\",\n            \"day_name\": \"Duminică\"\n        }\n    ],\n    \"latitude\": \"45.266197\",\n    \"longitude\": \"25.042355\",\n    \"first_name\": \"Camelia\",\n    \"last_name\": \"Vladescu\",\n    \"phone\": \"0753093902\",\n    \"manager_picture\": null,\n    \"url_key\": \"arges/campulung/altex-campulung\",\n    \"meta_title\": null,\n    \"meta_keywords\": null,\n    \"meta_description\": null,\n    \"password\": \"1b907f43da472fafec8254ba902a094903e03bf1ffc80a10cdd9141458f76aeb\",\n    \"credit_emails\": \"gabriel.moise@axsys.ro\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url_cms}}/stores/",
+							"host": [
+								"{{base_url_cms}}"
+							],
+							"path": [
+								"stores",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

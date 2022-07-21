@@ -1,0 +1,104 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 3500,
+    "app": {
+      "appName": "hapi-cms-api",
+      "releaseVersion": "1"
+    },
+    "router": {
+      "isCaseSensitive": false,
+      "stripTrailingSlash": true
+    },
+    "cache": [
+      {
+        "name": "redisCache",
+        "provider": {
+          "constructor": "",
+          "options": {
+            "partition": "cache",
+            "host": "127.0.0.1",
+            "port": 6379
+          }
+        }
+      }
+    ],
+    "debug": {
+      "request": ["error"]
+    }
+  },
+  "register": {
+    "plugins": [
+      "hapi-pino",
+      "@hapi/inert",
+      "@hapi/vision",
+      "hapi-swagger",
+      {
+        "plugin": "hapi-alerto",
+        "options": {
+          "dsn": "http://42ab6aca7ae94093942d7736257f6e26@sentry-s1.altex.ro/20"
+        }
+      },
+      {
+        "plugin": "hapi-internal-bridge",
+        "options": {
+          "serviceName": "CMS_API",
+          "serviceKey": "CMS_API_KEY",
+          "cacheName": "redisCache",
+          "cacheTTL": 120000,
+          "imApiUrl": "https://im-host"
+        }
+      },
+      {
+        "plugin": "hapi-panda-es",
+        "options": {
+          "connection": {
+            "node": "http://es-host:port",
+            "version": 7
+          },
+          "logger": {
+            "level": 10
+          }
+        }
+      },
+      {
+        "plugin": "./plugins/content",
+        "options": {
+          "page": {
+            "index": "pages",
+            "type": "store_1"
+          },
+          "banner": {
+            "index": "banners",
+            "type": "store_1"
+          },
+          "block": {
+            "index": "blocks",
+            "type": "store_1"
+          },
+          "region": {
+            "index": "regions",
+            "type": "store_1"
+          },
+          "city": {
+            "index": "cities",
+            "type": "store_1",
+            "pageSize": 5000
+          },
+          "store": {
+            "index": "stores",
+            "type": "store_1"
+          },
+          "company": {
+            "index": "companies",
+            "type": "store_1"
+          },
+          "seller": {
+            "index": "sellers",
+            "type": "store_1"
+          }
+        }
+      }
+    ]
+  }
+}

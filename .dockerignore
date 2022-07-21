@@ -1,0 +1,11 @@
+.idea
+.gitignore
+.editorconfig
+.jshintrc
+docs
+.DS_Store
+Jenkinsfile
+README.md
+node_modules
+npm-shrinkwrap.json
+package-lock.json
