@@ -24,7 +24,7 @@
     "hapi-internal-bridge": "git+ssh://git@gitlab.altex.ro:plug/hapi-internal-bridge.git",
     "hapi-panda-es": "^1.0.2",
     "hapi-pino": "^9.1.1",
-    "hapi-swagger": "^14.2.4",
+    "hapi-swagger": "^14.5.5",
     "joi": "^17.6.0",
     "lodash": "^4.17.14",
     "panda-es-orm": "^1.0.0",
