@@ -23,7 +23,7 @@
     "hapi-alerto": "git+ssh://git@gitlab.altex.ro:plug/hapi-alerto.git#release/1.0.0",
     "hapi-internal-bridge": "git+ssh://git@gitlab.altex.ro:plug/hapi-internal-bridge.git",
     "hapi-panda-es": "^1.0.2",
-    "hapi-pino": "^9.1.1",
+    "hapi-pino": "^9.4.0",
     "hapi-swagger": "^14.2.4",
     "joi": "^17.6.0",
     "lodash": "^4.17.14",
